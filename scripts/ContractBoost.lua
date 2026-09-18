@@ -172,7 +172,9 @@ function ContractBoost.openContractsMenu()
     g_gui:showGui("InGameMenu")
     inGameMenu:changeScreen(InGameMenu)
     local index = inGameMenu.pagingElement:getPageMappingIndexByElement(inGameMenu.pageContracts)
-    inGameMenu.pageSelector:setState(index, true)
+    if index ~= nil then
+        inGameMenu.pageSelector:setState(index, true)
+    end
 end
 
 
